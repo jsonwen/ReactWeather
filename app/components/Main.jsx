@@ -1,24 +1,17 @@
 var React = require('react');
 var Nav = require('Nav');
 
-// var Main = React.createClass({
-//   render: function() {
-//     return (
-//       <div>
-//         <Nav/>
-//         <h2>Main component</h2>
-//         {this.props.children}
-//       </div>
-//     );
-//   }
-// });
-
 var Main = (properties) => {
   return (
     <div>
       <Nav/>
-      <h2>Main component</h2>
-      {properties.children}
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
+            {properties.children}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
