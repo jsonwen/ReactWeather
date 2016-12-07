@@ -3,7 +3,9 @@ var webpack = require('webpack');
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/foundation.min.js',
+    //'script!foundation-sites/dist/foundation.min.js',
+    'script!tether/dist/js/tether.min.js',
+    'script!bootstrap/dist/js/bootstrap.min.js',
     './app/app.jsx'
   ],
   externals: {
@@ -12,7 +14,8 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       '$': 'jquery',
-      'jQuery': 'jquery'
+      'jQuery': 'jquery',
+      'window.Tether': 'tether'
     })
   ],
   output: {
