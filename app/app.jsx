@@ -8,7 +8,7 @@ var Examples = require('Examples');
 
 // Load bootstrap & styles
 require('style!css!bootstrap/dist/css/bootstrap.min.css');
-require('style!css!applicationStyles');
+require('applicationStyles');
 
 ReactDOM.render(
   <Router history={hashHistory}>

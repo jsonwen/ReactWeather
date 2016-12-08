@@ -25,6 +25,8 @@
     "bootstrap": "^4.0.0-alpha.5",
     "css-loader": "^0.23.1",
     "jquery": "^2.2.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",
     "tether": "^1.4.0",
