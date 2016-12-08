@@ -4,7 +4,14 @@ var {Link, IndexLink} = require('react-router');
 var Nav = React.createClass({
   onSearch: function(e) {
     e.preventDefault();
-    alert('Not yet wired up');
+
+    var location = this.refs.search.value;
+    var encodedLocation = encodeURIComponent(location);
+
+    if (location.length > 0) {
+      this.refs.search.value = '';
+      window.location.hash = '#/?location='+encodedLocation;
+    }
   },
   render: function() {
     return (
@@ -16,7 +23,7 @@ var Nav = React.createClass({
             <Link to="/examples" className="nav-item nav-link" activeClassName="active" activeStyle={{fontWeight:'bold'}}>Examples</Link>
           </nav>
           <form onSubmit={this.onSearch} className="float-xs-right">
-            <input type="text" className="form-control" placeholder="Search..."/>
+            <input ref="search" type="text" className="form-control" placeholder="Search..."/>
           </form>
         </div>
       </nav>
